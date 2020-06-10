@@ -1,21 +1,10 @@
-1.¹¦ÄÜ·Ö½â½âÎö:
+ï»¿ä¸»è¦åˆ©ç”¨html5  api 
 
-1.1 Í¼Æ¬·Å´óÔ¤ÀÀÊµÏÖ£º
-Ò»¿ªÊ¼µÄÊÓ¾õÐ§¹ûÊÇ ½«div ÏÂµÄ Í¼Æ¬²¿·Öµ¥¶Àµ¼³ö£¬ÆäÊµ²»ÊÇ Ö»ÊÇ½«¸ÃÍ¼Æ¬°´¿í¶È×ø±ê·Å´óµ½ ÁíÍâÒ»¸öÒ»¸ö div
+ä¸Šä¼ çš„æ–¹æ³•æœ‰ ï¼š
+1.åˆ©ç”¨html5 ä¸Šä¼ æ ‡ç­¾
+<input type="file" name="myfil[]" multiple="multiple" >
 
-1. Ô¤ÀÀ½á¹¹¹¹³É
-Ô­Àí£ºÒ»¹²Èý¸ödiv   Ò»¸öÔ­Í¼Æ¬div Ò»¸ö·Å´ó¾µdiv  Ò»¸öÔ¤ÀÀdiv    Ô¤ÀÀdivµÄ±³¾°Í¼ ºÍÔ­Í¼Æ¬divÒ»Ñù µ«ÊÇÍ¼Æ¬´óÐ¡µÃ·Å´ó £¬±¶Êý ÊÇ Ô­Í¼Æ¬div  ºÍ·Å´ó¾µdivÖ®¼äµÄ³ß´ç±¶Êý
+ä½†æ˜¯è¯¥æ ‡ç­¾ä¸èƒ½é¢„è§ˆ
 
-2.Ô¤ÀÀÍ¼Æ¬¸úËæ·Å´ó¾µÒÆ¶¯£º
-·½·¨£ºÈ·ÈÏºÃÔ­Í¼Æ¬div ºÍ·Å´ó¾µdiv Ö®¼äµÄ±¶Êý²î¾à£¬  ÏàÓ¦µÄ Ô¤ÀÀÍ¼Æ¬div±³¾°Í¼Æ¬ µÄ×ø±ê  x y¶¼·Å´óÏàÓ¦±¶Êý 
-
-3.±ß½ç¼ì²â	
-
-¼ì²âµÄºËÐÄÊÇ¿´±ß½ç
-·Ö½â¶¯×÷¡£
-Ä¿Ç°µÄÊÇ¾ØÐÎ£¬ÓÐËÄÌõ±ß½ç
-·Ö±ðÊÇx=250  x=0 y<0 y>250  ¹æ¶¨ºÃ Ô½³öÕâËÄÌõ±ßµÄÊý¾Ý´¦Àí¹æÔò¾ÍÐÐ£¬
-´¦ÀíºÃÊý¾Ýºó  ÓÃ´¦ÀíºÃµÄÊý¾Ý äÖÈ¾
-
-
-
+2.å¦‚ä½•å®žçŽ°é¢„è§ˆï¼š
+å¯ä»¥åˆ©ç”¨html5 FileReader api  æ‰“å¼€æœ¬åœ°æ–‡ä»¶æ˜¾ç¤ºåˆ°  é¡µé¢ä¸Š  FileReaderæ‰“å¼€è¯»å–çš„æ ¼å¼æ˜¯base64 

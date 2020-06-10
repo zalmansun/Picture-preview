@@ -2,59 +2,93 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>京东放大镜</title>
+	<title>Document</title>
 </head>
 <style>
-  	* {
-  		padding: 0;
-  		margin: 0;
-  	}
-	.fangda {
-		position: relative;
-		width: 500px;
-		height: 500px;
-		overflow: hidden
-	}
-	.fangda img {width: 100%}
-	.fdkuang {
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 250px;
-		height: 250px;
-		background-color: rgba(0, 0, 0, 0.3);
-		display: none
-	}
-	.fdshow {
-		position: absolute;
-		left: 100%;
-		top: 0;
-		left: 550px;
-		height: 500px;
-		width: 500px;
-		border: 1px solid #333;
-		overflow: hidden;
-		display: none
-	}
-	.fdshow  img {
-		width: 200%;
-		/* height: 200%; */
-		position: relative
-	}
+	
 </style>
 <body>
-	<div class="fangda">
-		<img src="2.jpg" alt="">
-		<div class="fdkuang"></div>
+filereader 导入的base64 图片可以通过src 直接显示出来
+那文本 对应的base64 可以通过什么方法显示html 内吗
+<!-- 单个文件上传下载预览 -->
+	<h1>单个文件上传下载</h1>
+	<div>
+		<h3>上传 预览</h3>
+		<form action="uploadheadimg.php" method="post"  enctype="multipart/form-data">
+		   选择一个文件: <input type="file" name="myfile"  id="fl">
+		   <input type="submit" value="上传">
+		</form>
+		<div id="show"></div>
 	</div>
-	<div class="fdshow" id="fdshow"><img src="2.jpg" alt=""></div>
+	<div>
+		<h3>下载</h3>
+		<h6>该api 猎豹好像用了，  而且好像不能选择保存路径</h6>
+		<div>
+			<img src="2.jpg" alt="">
+		</div>
+		<!-- <a href="2.jpg" download="w3logo">图片下载</a> -->
+		<a href="./2.jpg" download="">
+			下载
+		</a>
+	</div>
 
-	<script src="magnifierImg.js"></script>
+<!-- 多个文件上传下载预览 -->
+	<h1>多个文件上传下载</h1>
+	<div>
+		<h3>上传</h3>
+		<form action="uploadheadimg.php" method="post"  enctype="multipart/form-data">
+		   选择文件: <input type="file" name="myfil[]" multiple="multiple" >
+		   <input type="submit" value="上传">
+		</form>
+	</div>
+	<div>
+		<h3>下载</h3>
+		<h6>该api 猎豹好像用了，  而且好像不能选择保存路径</h6>
+		<div>
+			<img src="2.jpg" alt="">
+		</div>
+		<!-- <a href="2.jpg" download="w3logo">图片下载</a> -->
+		<a href="./2.jpg" download="">
+			下载
+		</a>
+	</div>
+
 	<script>
-		var imglist=new magnifierImg();
-		imglist.init({
-			name:"fangda"
-		});
+		(function(){
+			var img=0;
+			function readFile(){
+				var file = this.files[0];
+				if(!/image\/\w+/.test(file.type)){
+					alert("文件必须为图片！");
+					return false;
+				}
+				var reader = new FileReader();
+				reader.readAsDataURL(file);
+				reader.onload = function(e){
+					if (img!=this.result) {
+						img=this.result;
+						document.getElementById("show").innerHTML = '<img src="'+ this.result + '" >';
+					}
+				}
+			}
+			document.getElementById("fl").addEventListener("change", readFile);
+		})();
+
+		var data = {
+			"dd":[
+				{"a":"11","b":"22"},
+				{"a":"11","b":"22"},
+				{"a":"11","b":"22"}
+			],
+			"tt":[
+				{"a":"11","b":"22"},
+				{"a":"11","b":"22"},
+				{"a":"11","b":"22"}
+			]
+		};
+		var t=Math.random().toString(10).substr();
+
+		console.log(t);
 	</script>
 </body>
 </html>
