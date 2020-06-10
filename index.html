@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东放大镜</title>
+</head>
+<style>
+  	* {
+  		padding: 0;
+  		margin: 0;
+  	}
+	.fangda {
+		position: relative;
+		width: 500px;
+		height: 500px;
+		overflow: hidden
+	}
+	.fangda img {width: 100%}
+	.fdkuang {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 250px;
+		height: 250px;
+		background-color: rgba(0, 0, 0, 0.3);
+		display: none
+	}
+	.fdshow {
+		position: absolute;
+		left: 100%;
+		top: 0;
+		left: 550px;
+		height: 500px;
+		width: 500px;
+		border: 1px solid #333;
+		overflow: hidden;
+		display: none
+	}
+	.fdshow  img {
+		width: 200%;
+		/* height: 200%; */
+		position: relative
+	}
+</style>
+<body>
+	<div class="fangda">
+		<img src="2.jpg" alt="">
+		<div class="fdkuang"></div>
+	</div>
+	<div class="fdshow" id="fdshow"><img src="2.jpg" alt=""></div>
+
+	<script src="magnifierImg.js"></script>
+	<script>
+		var imglist=new magnifierImg();
+		imglist.init({
+			name:"fangda"
+		});
+	</script>
+</body>
+</html>
