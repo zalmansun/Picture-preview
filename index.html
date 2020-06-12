@@ -8,8 +8,8 @@
 	
 </style>
 <body>
-filereader 导入的base64 图片可以通过src 直接显示出来
-那文本 对应的base64 可以通过什么方法显示html 内吗
+	filereader 导入的base64 图片可以通过src 直接显示出来
+	那文本 对应的base64 可以通过什么方法显示html 内吗
 <!-- 单个文件上传下载预览 -->
 	<h1>单个文件上传下载</h1>
 	<div>
@@ -52,43 +52,6 @@ filereader 导入的base64 图片可以通过src 直接显示出来
 			下载
 		</a>
 	</div>
-
-	<script>
-		(function(){
-			var img=0;
-			function readFile(){
-				var file = this.files[0];
-				if(!/image\/\w+/.test(file.type)){
-					alert("文件必须为图片！");
-					return false;
-				}
-				var reader = new FileReader();
-				reader.readAsDataURL(file);
-				reader.onload = function(e){
-					if (img!=this.result) {
-						img=this.result;
-						document.getElementById("show").innerHTML = '<img src="'+ this.result + '" >';
-					}
-				}
-			}
-			document.getElementById("fl").addEventListener("change", readFile);
-		})();
-
-		var data = {
-			"dd":[
-				{"a":"11","b":"22"},
-				{"a":"11","b":"22"},
-				{"a":"11","b":"22"}
-			],
-			"tt":[
-				{"a":"11","b":"22"},
-				{"a":"11","b":"22"},
-				{"a":"11","b":"22"}
-			]
-		};
-		var t=Math.random().toString(10).substr();
-
-		console.log(t);
-	</script>
+	<script src="upflie.js"></script>
 </body>
 </html>
